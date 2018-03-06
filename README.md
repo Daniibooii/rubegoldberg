@@ -22,20 +22,20 @@ All members contributed to the Javscript elements, as well as thinking up and cr
 Our project is hosted at: https://xhandler.github.io/rubegoldberg/<br>
 
 # Contributors
-Afolabi Akingbe - research, back-end; game contributed: []
+Afolabi Akingbe - research, back-end; game contributed: []<br>
   Github: https://github.com/folaakingbe<br>
-Chandler Dibble - project lead/organizer; research, back-end; game contributed: []
+Chandler Dibble - project lead/organizer; research, back-end; game contributed: []<br>
   Github: https://github.com/Xhandler<br>
-Tim Hill - research, back-end; game contributed: []
+Tim Hill - research, back-end; game contributed: []<br>
   Github: https://github.com/peakcodes<br>
-Daniel Mace - project historian/note-taker; research, back-end; game contributed: []
+Daniel Mace - project historian/note-taker; research, back-end; game contributed: []<br>
   Github: https://github.com/Daniibooii<br>
 
 ## How to Use
 The user will need to clone a copy of our repo.<br>
 Then, he or she should open the index.html file in a browser of their choice.<br>
 The user will then play through a series of levels, or mini-games.<br>
-Each contains its own challenge, which won't be revealed here.<br>
+Each level contains its own challenge, which won't be revealed here.<br>
 
 The user will interact with a choice of objects and place or utilize them to attempt to solve challenges.<br>
 
