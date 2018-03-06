@@ -22,13 +22,13 @@ All members contributed to the Javscript elements, as well as thinking up and cr
 Our project is hosted at: https://xhandler.github.io/rubegoldberg/<br>
 
 # Contributors
-Afolabi Akingbe - research, back-end; game contributed: []<br>
+Afolabi Akingbe - research, back-end; level contributed: []<br>
   Github: https://github.com/folaakingbe<br>
-Chandler Dibble - project lead/organizer; research, back-end; game contributed: []<br>
+Chandler Dibble - project lead/organizer; research, back-end; level contributed: []<br>
   Github: https://github.com/Xhandler<br>
-Tim Hill - research, back-end; game contributed: []<br>
+Tim Hill - research, back-end; level contributed: []<br>
   Github: https://github.com/peakcodes<br>
-Daniel Mace - project historian/note-taker; research, back-end; game contributed: []<br>
+Daniel Mace - project historian/note-taker; research, back-end; level contributed: []<br>
   Github: https://github.com/Daniibooii<br>
 
 ## How to Use
