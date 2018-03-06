@@ -1,0 +1,22 @@
+{
+  "name": "rubegoldberg",
+  "version": "1.0.0",
+  "description": "# Project Description This project represents a group effort to create a Rube Goldberg Machine-creating app. The project was conceived and organized by Chandler Dibble. The app was developed by a four-person team over one week. The total time spent developing our project, including time spent learning new tools, is estimated at [ hours].",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xhandler/rubegoldberg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xhandler/rubegoldberg/issues"
+  },
+  "homepage": "https://github.com/Xhandler/rubegoldberg#readme",
+  "dependencies": {
+    "matter-js": "^0.14.1"
+  }
+}
