@@ -71,3 +71,28 @@ function AddCircle(x, y, r) {
 	}
 
 }
+
+function AddPolygon(x, y, s, radius) {
+	let options = {
+		friction: .2,
+		restitution: 1
+	}
+	this.body = Bodies.polygon(x, y, sides, radius, options)
+	World.add(world, this.body);
+	this.sides = s;
+	this.radius = r;
+	this.show = () => {
+		let pos = this.body.position;
+		let angle = this.body.angle;
+
+		push();
+		translate(pos.x, pos.y);
+		rotate(angle);
+		strokeWeight(1);
+		stroke(222);
+		fill(120);
+		poly(0, 0, this.sides, this.radius);
+		pop();
+	}
+
+}
