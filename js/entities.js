@@ -16,18 +16,18 @@ function AddBox(x, y, w, h) { // Ex. Constructor
 		restitution: 1
 	}
 	this.body = Bodies.rectangle(x, y, w, h, options) // See matter.js docs for more bodies
-	World.add(world, this.body);
 	this.w = w;
 	this.h = h;
+	this.houdini = () =>{
+	let pos = this.body.position;
+	let angle = this.body.angle;
+	World.add(world, this.body);
+		return (pos.y > height + 50);
+	}
+	this.del = () =>{
+		Matter.Composite.remove(world, this.body);
+	}
 	this.show = () => { // Ex. Show method XXX Caution depending on the entity shape / appearance these must be altered
-		let pos = this.body.position;
-		let angle = this.body.angle;
-		this.houdini = () =>{
-			return (pos.y > height + 50);
-		}
-		this.del = () =>{
-			Matter.world.remove(world, this.body);
-		}
 
 		push();
 		translate(pos.x, pos.y);
@@ -48,17 +48,17 @@ function AddCircle(x, y, r) {
 		restitution: 1
 	}
 	this.body = Bodies.circle(x, y, (r/2), options)
+	let pos = this.body.position;
+	let angle = this.body.angle;
 	World.add(world, this.body);
 	this.r = r;
 	this.houdini = () =>{
 		return (pos.y > height + 50);
 	}
 	this.del = () =>{
-		Matter.world.remove(world, this.body);
+		Matter.Composite.remove(world, this.body);
 	}
 	this.show = () => {
-		let pos = this.body.position;
-		let angle = this.body.angle;
 
 		push();
 		translate(pos.x, pos.y);
