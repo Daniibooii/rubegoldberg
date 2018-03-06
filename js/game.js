@@ -6,6 +6,7 @@
 
 let selected = "circle";
 
+
 // Importing Matter.js
 let Engine = Matter.Engine,
 	Render = Matter.Render,
@@ -23,20 +24,18 @@ let options = {
 function setup() {
 	//TODO: Add some sort of level system
 	//Draw the area our game will be played then center
-	let cnv = createCanvas(1120, 640);
-	let x = (windowWidth - width) / 2;
-	let y = (windowHeight - height) / 2;
-	cnv.position(x, y);
-
-	//Create our physics engine
+	
+	game.content.main(); // draws our canvas
 	engine = Engine.create();
 	world = engine.world;
 	Engine.run(engine);
-	let ground = Bodies.rectangle(560, height, width, 30, options);
-	World.add(world, ground);
+	ground = Bodies.rectangle(560, height, width, 30, options);
+	sideBoundry = Bodies.rectangle(960, 560, 320, height, options);
+	World.add(world, [ground, sideBoundry]);
+
 }
 
-function mouseDragged() {
+function mouseClicked() {
 	// TODO: Revise this function and conditional to better suite our game. Possibly think of way around conditional statement
 	//Here we are using our constructor to add new boxes. see entities.js
 	if (selected === "box") {
@@ -53,20 +52,31 @@ function draw() {
 	// TODO: Remove for loops and use map to draw all of our entities
 	// Here is where all of our rendering goes down
 	background(187);
-	for (var i = 0; i < circles.length; i++) {
-		circles[i].show();
+	for (let i = 0; i < circles.length; i++) {
+		let e = circles[i];
+		e.show();
+		if(e.houdini()){
+			e.del();
+			circles.splice(i, 1);
+			i--;
+		}
 	}
 	// let drawCircles = circles.map(()=>{
 	// 	this.show});
 
-	for (var i = 0; i < boxes.length; i++) {
-		boxes[i].show();
+	for (let i = 0; i < boxes.length; i++) {
+		let e = boxes[i];
+		e.show();
+		if(e.houdini()){
+			e.del();
+			boxes.splice(i, 1);
+			i--;
+		}
 	}
 	//Ground
-	push();
-	rectMode(CENTER); // Mode center set
-	rect(560, height, width, 30);
-	fill(100);
-	pop();
+	// ground.push();
+	game.content.side();
+	game.level.one();
+	// ground.pop();
 
 }
