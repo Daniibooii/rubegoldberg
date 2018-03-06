@@ -42,7 +42,10 @@ function mouseClicked() {
 		boxes.push(new AddBox(mouseX, mouseY, (random(16) * 8), (random(16) * 8)));
 	} else if (selected === "circle") {
 		circles.push(new AddCircle(mouseX, mouseY, random(64)))
-	} else {
+	} else if (selected === "polygon") {
+	polygons.push(new AddPolygon(mouseX, mouseY, (3), (16)));
+	}
+	else {
 		console.log("nothing selected");
 	}
 
@@ -72,6 +75,16 @@ function draw() {
 			boxes.splice(i, 1);
 			i--;
 		}
+	}
+	
+	for (var i = 0; i < polygons.length; i++) {
+   		let e = polygons[i];
+		e.show();
+		if(e.houdini()){
+			e.del();
+			polygons.splice(i, 1);
+			i--;
+  		}
 	}
 	//Ground
 	// ground.push();
