@@ -11,7 +11,7 @@
 
 function AddBox(x, y, w, h) { // Ex. Constructor
 	let options = { // Ex. options obj
-		// TODO: Add every potential propety + desciption? 
+		// TODO: Add every potential propety + desciption?
 		friction: .2,
 		restitution: 1
 	}
@@ -22,6 +22,12 @@ function AddBox(x, y, w, h) { // Ex. Constructor
 	this.show = () => { // Ex. Show method XXX Caution depending on the entity shape / appearance these must be altered
 		let pos = this.body.position;
 		let angle = this.body.angle;
+		this.houdini = () =>{
+			return (pos.y > height + 50);
+		}
+		this.del = () =>{
+			Matter.world.remove(world, this.body);
+		}
 
 		push();
 		translate(pos.x, pos.y);
@@ -44,6 +50,12 @@ function AddCircle(x, y, r) {
 	this.body = Bodies.circle(x, y, (r/2), options)
 	World.add(world, this.body);
 	this.r = r;
+	this.houdini = () =>{
+		return (pos.y > height + 50);
+	}
+	this.del = () =>{
+		Matter.world.remove(world, this.body);
+	}
 	this.show = () => {
 		let pos = this.body.position;
 		let angle = this.body.angle;
