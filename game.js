@@ -21,7 +21,7 @@ let options = {
 }
 
 function setup() {
-	//TODO: Add some sort of level system 
+	//TODO: Add some sort of level system
 	//Draw the area our game will be played then center
 	let cnv = createCanvas(1120, 640);
 	let x = (windowWidth - width) / 2;
@@ -37,7 +37,7 @@ function setup() {
 }
 
 function mouseDragged() {
-	// TODO: Revise this found and conditional to better suite our game. Possibly think of way around conditional statement
+	// TODO: Revise this function and conditional to better suite our game. Possibly think of way around conditional statement
 	//Here we are using our constructor to add new boxes. see entities.js
 	if (selected === "box") {
 		boxes.push(new AddBox(mouseX, mouseY, (random(16) * 8), (random(16) * 8)));
@@ -51,7 +51,7 @@ function mouseDragged() {
 
 function draw() {
 	// TODO: Remove for loops and use map to draw all of our entities
-	// Here is where all of our rendering does down
+	// Here is where all of our rendering goes down
 	background(187);
 	for (var i = 0; i < circles.length; i++) {
 		circles[i].show();
