@@ -1,7 +1,9 @@
 # Rube Goldberg Machine
 
 # Project Description
-This project represents a group effort to create a Rube Goldberg Machine-creating game, with multiple levels.<br>
+**As of now, this project is on hold, but may be returned to at a future date**
+
+This is my fork of a group project which attempted to create a Rube Goldberg Machine-creating game, with multiple levels.<br>
 The project was conceived and organized by Chandler Dibble.<br>
 The game was developed by a four-person team over one week.<br>
 The total time spent developing our project, including time spent learning new tools, is estimated at 120+ hours.<br>
